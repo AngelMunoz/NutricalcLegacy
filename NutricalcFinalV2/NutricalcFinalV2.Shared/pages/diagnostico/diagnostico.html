@@ -1,0 +1,263 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Diagnostico</title>
+
+    <link href="diagnostico.css" rel="stylesheet" />
+    <script src="../../js/jquery-2.1.3.min.js"></script>
+    <script src="diagnostico.js"></script>
+    
+</head>
+<body>
+    <div class="diagnostico fragment">
+        <header class="page-header" aria-label="Header content" role="banner">
+            <button class="back-button" data-win-control="WinJS.UI.BackButton"></button>
+        </header>
+        <section class="page-section" aria-label="Main content" role="main">
+            <header id="tituloPagina"> <h1>Diagnostico Energetico y Nutricional</h1></header>
+            <div id="datosPacienteDiv">
+                <form id="datosPacienteForm">
+                    <input id="idPaciente" name="idPaciente" type="number" placeholder="Id Paciente" />
+                    <br />Tipos de Parametro: <br /> 1 Hombre, 2 Mujer, 3 Mujer Embarazada
+                    <input id="parametro" name="parametro" type="number" required placeholder="Parametro" />
+                    <input id="nombre" name="nombre" type="text" placeholder="Nombre" />
+                    <input id="sexo" name="sexo" type="text" placeholder="Sexo" />
+                    <input id="edad" name="edad" type="number" required placeholder="Edad" />
+                    <input id="peso" name="peso" type="text" required placeholder="Peso" />
+                    <input id="talla" name="talla" type="text" required placeholder="Talla" />
+                    <input id="horaSueno" name="horaSueno" type="text" required placeholder="Horas de Sueno" />
+                    <br /> Tipos de Parametro para Actividad Fisica: <br />
+                     Poca o Nada: 1, Ligera: 2,<br /> Moderado: 3, Fuerte: 4, Muy Fuerte: 5.
+                    <input id="actFisica" name="actFisica" type="text" required placeholder="Actividad Fisica" />
+                </form>
+                <input id="btnCalcularGet" type="button" value="Calcular GET" />
+                <input id="getGet" type="number" contenteditable="false" placeholder="Gasto Energetico Total" />
+            </div>
+            <div id="tablasNutricionales" style="overflow-x:auto; overflow-y:auto;" />
+            <div id="tablaDietoSinteticaContainer">
+                <table id="tablaDietoSintetica" class="tg">
+                    <tr>
+                        <th class="tg-nqdd"></th>
+                        <th class="tg-031e">Gramos</th>
+                        <th class="tg-031e">Calorias</th>
+                        <th class="tg-031e">Porcentaje</th>
+                    </tr>
+                    <tr>
+                        <td class="tg-031e">Carbohidratos</td>
+                        <td class="tg-031e"><input id="choGramos" type="text" placeholder="Gramos" style="width: 80px;" contenteditable="false"></td>
+                        <td class="tg-031e"><input id="choCalorias" type="text" placeholder="Calorias" style="width: 80px;" contenteditable="false"></td>
+                        <td class="tg-031e"><input id="porcentajeChos" type="text" placeholder="Porcentaje" style="width: 90px;" value="0"></td>
+                    </tr>
+                    <tr>
+                        <td class="tg-031e">Proteinas</td>
+                        <td class="tg-031e"><input id ="protGramos" type="text" placeholder="Gramos" style="width: 80px;" contenteditable="false"></td>
+                        <td class="tg-031e"><input id="protCalorias" type="text" placeholder="Calorias" style="width: 80px;" contenteditable="false" /></td>
+                        <td class="tg-031e"><input id="porcentajeProt" type="text" placeholder="Porcentaje" style="width: 90px;" value="0"></td>
+                    </tr>
+                    <tr>
+                        <td class="tg-031e">Lipidos</td>
+                        <td class="tg-031e"><input id="lipGramos" type="text" placeholder="Gramos" style="width: 80px;" contenteditable="false"></td>
+                        <td class="tg-031e"><input id="lipCalorias" type="text" placeholder="Calorias" style="width: 80px;" contenteditable="false" /></td>
+                        <td class="tg-031e"><input id="porcentajeLip" type="number" placeholder="Porcentaje" style="width: 90px;" value="0"></td>
+                    </tr>
+                </table>
+                <input type="button" id="btnCalcularDietoSintetica" value="Calcular Tabla Dietosintetica!" />
+            </div>
+            <div id="tablaRaciones" style="margin-left: 5px;">
+                <table class="data-table">
+                    <tr style="background-color: #26ADE4; color: #fff;">
+                        <th class="border-top border-bottom border-left">Grupo de Alimentos</th>
+                        <th class="border-top border-bottom">1a.</th>
+                        <th class="border-top border-bottom">2a.</th>
+                        <th class="border-top border-bottom">3a.</th>
+                        <th class="border-top border-bottom">4a.</th>
+                        <th class="border-top border-bottom">5a.</th>
+                        <th class="border-top border-bottom border-right">6a.</th>
+                        <th class="border-top border-bottom border-right">Total de Raciones</th>
+                    </tr>
+                    <tr>
+                        <td class="border-bottom border-left">Panes y Cereales</td>
+                        <td class="border-bottom"><input id="pc1a" type="number" placeholder="Cant." style="width:35px;" value="0" /></td>
+                        <td class="border-bottom"><input id="pc2a" type="number" placeholder="Cant." style="width:35px;" value="0" /></td>
+                        <td class="border-bottom"><input id="pc3a" type="number" placeholder="Cant." style="width:35px;" value="0" /></td>
+                        <td class="border-bottom"><input id="pc4a" type="number" placeholder="Cant." style="width:35px;" value="0" /></td>
+                        <td class="border-bottom"><input id="pc5a" type="number" placeholder="Cant." style="width:35px;" value="0" /></td>
+                        <td class="border-bottom border-right"><input id="pc6a" type="number" placeholder="Cant." style="width:35px;" value="0" /></td>
+                        <td class="border-bottom border-right"><input id="pcTotal" type="number" placeholder="Cantidad Total." style="width:130px;" value="0" contenteditable="false"/></td>
+                    </tr>
+                    <tr>
+                        <td class="border-bottom border-left">Leguminosas</td>
+                        <td class="border-bottom"><input id="leg1a" type="number" placeholder="Cant." style="width:35px;" value="0" /></td>
+                        <td class="border-bottom"><input id="leg2a" type="number" placeholder="Cant." style="width:35px;" value="0" /></td>
+                        <td class="border-bottom"><input id="leg3a" type="number" placeholder="Cant." style="width:35px;" value="0" /></td>
+                        <td class="border-bottom"><input id="leg4a" type="number" placeholder="Cant." style="width:35px;" value="0" /></td>
+                        <td class="border-bottom"><input id="leg5a" type="number" placeholder="Cant." style="width:35px;" value="0" /></td>
+                        <td class="border-bottom border-right"><input id="leg6a" type="number" placeholder="Cant." style="width:35px;" value="0" /></td>
+                        <td class="border-bottom border-right"><input id="legTotal" type="number" placeholder="Cantidad Total." style="width:130px;" value="0" contenteditable="false" /></td>
+                    </tr>
+                    <tr>
+                        <td class="border-bottom border-left">Frutas</td>
+                        <td class="border-bottom"><input id="frut1a" type="number" placeholder="Cant." style="width:35px;" value="0" /></td>
+                        <td class="border-bottom"><input id="frut2a" type="number" placeholder="Cant." style="width:35px;" value="0" /></td>
+                        <td class="border-bottom"><input id="frut3a" type="number" placeholder="Cant." style="width:35px;" value="0" /></td>
+                        <td class="border-bottom"><input id="frut4a" type="number" placeholder="Cant." style="width:35px;" value="0" /></td>
+                        <td class="border-bottom"><input id="frut5a" type="number" placeholder="Cant." style="width:35px;" value="0" /></td>
+                        <td class="border-bottom border-right"><input id="frut6a" type="number" placeholder="Cant." style="width:35px;" value="0" /></td>
+                        <td class="border-bottom border-right"><input id="frutTotal" type="number" placeholder="Cantidad Total." style="width:130px;" value="0" contenteditable="false"/></td>
+                    </tr>
+                    <tr>
+                        <td class="border-bottom border-left">Verduras</td>
+                        <td class="border-bottom"><input id="ver1a" type="number" placeholder="Cant." style="width:35px;" value="0" /></td>
+                        <td class="border-bottom"><input id="ver2a" type="number" placeholder="Cant." style="width:35px;" value="0" /></td>
+                        <td class="border-bottom"><input id="ver3a" type="number" placeholder="Cant." style="width:35px;" value="0" /></td>
+                        <td class="border-bottom"><input id="ver4a" type="number" placeholder="Cant." style="width:35px;" value="0" /></td>
+                        <td class="border-bottom"><input id="ver5a" type="number" placeholder="Cant." style="width:35px;" value="0" /></td>
+                        <td class="border-bottom border-right"><input id="ver6a" type="number" placeholder="Cant." style="width:35px;" value="0" /></td>
+                        <td class="border-bottom border-right"><input id="verTotal" type="number" placeholder="Cantidad Total." style="width:130px;" value="0" contenteditable="false" /></td>
+                    </tr>
+                    <tr>
+                        <td class="border-bottom border-left">Lacteos</td>
+                        <td class="border-bottom"><input id="lac1a" type="number" placeholder="Cant." style="width:35px;" value="0" /></td>
+                        <td class="border-bottom"><input id="lac2a" type="number" placeholder="Cant." style="width:35px;" value="0" /></td>
+                        <td class="border-bottom"><input id="lac3a" type="number" placeholder="Cant." style="width:35px;" value="0" /></td>
+                        <td class="border-bottom"><input id="lac4a" type="number" placeholder="Cant." style="width:35px;" value="0" /></td>
+                        <td class="border-bottom"><input id="lac5a" type="number" placeholder="Cant." style="width:35px;" value="0" /></td>
+                        <td class="border-bottom border-right"><input id="lac6a" type="number" placeholder="Cant." style="width:35px;" value="0" /></td>
+                        <td class="border-bottom border-right"><input id="lacTotal" type="number" placeholder="Cantidad Total." style="width:130px;" value="0" contenteditable="false" /></td>
+                    </tr>
+                    <tr>
+                        <td class="border-bottom border-left">Carnes</td>
+                        <td class="border-bottom"><input id="car1a" type="number" placeholder="Cant." style="width:35px;" value="0" /></td>
+                        <td class="border-bottom"><input id="car2a" type="number" placeholder="Cant." style="width:35px;" value="0" /></td>
+                        <td class="border-bottom"><input id="car3a" type="number" placeholder="Cant." style="width:35px;" value="0" /></td>
+                        <td class="border-bottom"><input id="car4a" type="number" placeholder="Cant." style="width:35px;" value="0" /></td>
+                        <td class="border-bottom"><input id="car5a" type="number" placeholder="Cant." style="width:35px;" value="0" /></td>
+                        <td class="border-bottom border-right"><input id="car6a" type="number" placeholder="Cant." style="width:35px;" value="0" /></td>
+                        <td class="border-bottom border-right"><input id="carTotal" type="number" placeholder="Cantidad Total." style="width:130px;" value="0" contenteditable="false" /></td>
+                    </tr>
+                    <tr>
+                        <td class="border-bottom border-left">Grasas</td>
+                        <td class="border-bottom"><input id="gra1a" type="number" placeholder="Cant." style="width:35px;" value="0" /></td>
+                        <td class="border-bottom"><input id="gra2a" type="number" placeholder="Cant." style="width:35px;" value="0" /></td>
+                        <td class="border-bottom"><input id="gra3a" type="number" placeholder="Cant." style="width:35px;" value="0" /></td>
+                        <td class="border-bottom"><input id="gra4a" type="number" placeholder="Cant." style="width:35px;" value="0" /></td>
+                        <td class="border-bottom"><input id="gra5a" type="number" placeholder="Cant." style="width:35px;" value="0" /></td>
+                        <td class="border-bottom border-right"><input id="gra6a" type="number" placeholder="Cant." style="width:35px;" value="0" /></td>
+                        <td class="border-bottom border-right"><input id="graTotal" type="number" placeholder="Cantidad Total." style="width:130px;" value="0" contenteditable="false" /></td>
+                    </tr>
+                    <tr>
+                        <td class="border-bottom border-left">Azucares</td>
+                        <td class="border-bottom"><input id="azu1a" type="number" placeholder="Cant." style="width:35px;" value="0" /></td>
+                        <td class="border-bottom"><input id="azu2a" type="number" placeholder="Cant." style="width:35px;" value="0" /></td>
+                        <td class="border-bottom"><input id="azu3a" type="number" placeholder="Cant." style="width:35px;" value="0" /></td>
+                        <td class="border-bottom"><input id="azu4a" type="number" placeholder="Cant." style="width:35px;" value="0" /></td>
+                        <td class="border-bottom"><input id="azu5a" type="number" placeholder="Cant." style="width:35px;" value="0" /></td>
+                        <td class="border-bottom border-right"><input id="azu6a" type="number" placeholder="Cant." style="width:35px;" value="0" /></td>
+                        <td class="border-bottom border-right"><input id="azuTotal" type="number" placeholder="Cantidad Total." style="width:130px;" value="0" contenteditable="false" /></td>
+                    </tr>
+                </table>
+                <input type="button" id="btnCalcularRaciones" value="Calcular Raciones!"/>
+                <input type="button" id="btnCalcularComparativa" style="margin-left:400px;" value="Calcular Tabla Comparativa!" />
+            </div>
+            <div id="tablaComparativaContainer">
+                
+                <table id="tablaComparativa" class="tg">    
+                    <tr>
+                        <th class="tg-031e">Grupo de Alimentos</th>
+                        <th class="tg-031e">Carbohidratos</th>
+                        <th class="tg-031e">Proteinas</th>
+                        <th class="tg-031e">Lipidos</th>
+                        <th class="tg-031e">Calorias</th>
+                    </tr>
+                    <tr>
+                        <!-- Panes y Cereales -->
+                        <td class="tg-031e">Panes y Cereales</td> <!-- Equivalente al total de Raciones -->
+                        <td class="tg-vn4c">x 15 = <input class="intInput" id="pcChoInput"  placeholder="0" contenteditable="false"/></td> <!-- Equivalente a los Carbohidratos -->
+                        <td class="tg-031e">x 3 = <input class="intInput" id="pcProtInput" placeholder="0" contenteditable="false" /></td> <!-- Equivalente a las Proteinas -->
+                        <td class="tg-vn4c">x 1 = <input class="intInput" id="pcLipInput" placeholder="0" contenteditable="false" /></td> <!-- Equivalente a los Lipidos -->
+                        <td class="tg-031e">x 80 = <input class="intInput" id="pcCalInput" placeholder="0" contenteditable="false" /></td> <!-- Equivalente a las Calorias -->
+                    </tr>
+                    <tr>
+                        <!-- Leguminosas -->
+                        <td class="tg-031e">Leguminosas</td>
+                        <td class="tg-vn4c">x 15 = <input class="intInput" id="legChoInput" placeholder="0" contenteditable="false" /></td>
+                        <td class="tg-031e">x 7 = <input class="intInput" id="legProtInput" placeholder="0" contenteditable="false" /></td>
+                        <td class="tg-vn4c">x 1 = <input class="intInput" id="legLipInput" placeholder="0" contenteditable="false" /></td>
+                        <td class="tg-031e">x 100 = <input class="intInput" id="legCalInput" placeholder="0" contenteditable="false" /></td>
+                    </tr>
+                    <tr>
+                        <!-- Frutas -->
+                        <td class="tg-031e">Frutas</td>
+                        <td class="tg-vn4c">x 15 = <input class="intInput" id="frutChoInput" placeholder="0" contenteditable="false" /></td>
+                        <td class="tg-031e">x 0 = <input class="intInput" id="frutProtInput" placeholder="0" contenteditable="false" /></td>
+                        <td class="tg-vn4c">x 0 = <input class="intInput" id="frutLipInput" placeholder="0" contenteditable="false" /></td>
+                        <td class="tg-031e">x 60 = <input class="intInput" id="frutCalInput" placeholder="0" contenteditable="false" /></td>
+                    </tr>
+                    <tr>
+                        <!-- Verduras -->
+                        <td class="tg-031e">Verduras</td>
+                        <td class="tg-vn4c">x 5 = <input class="intInput" id="verChoInput" placeholder="0" contenteditable="false" /></td>
+                        <td class="tg-031e">x 2 = <input class="intInput" id="verProtInput" placeholder="0" contenteditable="false" /></td>
+                        <td class="tg-vn4c">x 0 = <input class="intInput" id="verLipInput" placeholder="0" contenteditable="false" /></td>
+                        <td class="tg-031e">x 25 = <input class="intInput" id="verCalInput" placeholder="0" contenteditable="false" /></td>
+                    </tr>
+                    <tr>
+                        <!-- Lacteos -->
+                        <td class="tg-031e">Lacteos</td>
+                        <td class="tg-vn4c">x 12 = <input class="intInput" id="lacChoInput" placeholder="0" contenteditable="false" /></td>
+                        <td class="tg-031e">x 8 = <input class="intInput" id="lacProtInput" placeholder="0" contenteditable="false" /></td>
+                        <td class="tg-vn4c">x<input class="intInput" id="coefLactLipidos" placeholder=" 1, 5, 8" /> = <input class="intInput" id="lacLipInput" placeholder="0" contenteditable="false" /></td>
+                        <td class="tg-031e">x<input class="intInput" id="coefLactCalorias" placeholder=" 90, 120, 150" /> = <input class="intInput" id="lacCalInput" placeholder="0" contenteditable="false" /></td>
+                    </tr>
+                    <tr>
+                        <!-- Carnes -->
+                        <td class="tg-031e">Carnes</td><!-- Equivalente al total de Raciones -->
+                        <td class="tg-vn4c">x 0 =<input class="intInput" id="carChoInput" placeholder="0" contenteditable="false" /></td><!-- Equivalente a los Carbohidratos -->
+                        <td class="tg-031e">x 7 = <input class="intInput" id="carProtInput" placeholder="0" contenteditable="false" /></td><!-- Equivalente a las Proteinas -->
+                        <td class="tg-vn4c">x 5 =<input class="intInput" id="carLipInput" placeholder="0" contenteditable="false" /></td><!-- Equivalente a los Lipidos -->
+                        <td class="tg-031e">x 75 = <input class="intInput" id="carCalInput" placeholder="0" contenteditable="false" /></td><!-- Equivalente a las Calorias -->
+                    </tr>
+                    <tr>
+                        <!-- Grasas -->
+                        <td class="tg-031e">Grasas</td>
+                        <td class="tg-vn4c">x 0 =<input class="intInput" id="graChoInput" placeholder="0" contenteditable="false" /></td>
+                        <td class="tg-031e">x 0 =<input class="intInput" id="graProtInput" placeholder="0" contenteditable="false" /></td>
+                        <td class="tg-vn4c">x 5 =<input class="intInput" id="graLipInput" placeholder="0" contenteditable="false" /></td>
+                        <td class="tg-031e">x 45 =<input class="intInput" id="graCalInput" placeholder="0" contenteditable="false" /></td>
+                    </tr>
+                    <tr>
+                        <!-- Azucares -->
+                        <td class="tg-031e">Azucares</td>
+                        <td class="tg-vn4c">x 10 = <input class="intInput" id="azuChoInput" placeholder="0" contenteditable="false" /></td>
+                        <td class="tg-031e">x 0 =<input class="intInput" id="azuProtInput" placeholder="0" contenteditable="false" /></td>
+                        <td class="tg-vn4c">x 0 =<input class="intInput" id="azuLipInput" placeholder="0" contenteditable="false" /></td>
+                        <td class="tg-031e">x 40 =<input class="intInput" id="azuCalInput" placeholder="0" contenteditable="false" /></td>
+                    </tr>
+                    <tr>
+                        <td class="tg-031e">Gramos</td>
+                        <td class="tg-vn4c"><input class="intInput" id="gramChoTotal" type="number" placeholder="0" contenteditable="false" /></td>
+                        <td class="tg-031e"><input class="intInput" id="gramProtTotal" type="number" placeholder="0" contenteditable="false" /></td>
+                        <td class="tg-vn4c"><input class="intInput" id="gramLipTotal" type="number" placeholder="0" contenteditable="false" /></td>
+                        <td class="tg-031e"></td>
+                    </tr>
+                    <tr>
+                        <td class="tg-031e">Calorias</td>
+                        <td class="tg-vn4c">x 4 = <input class="intInput" id="calChosTotal" type="number" placeholder="0" contenteditable="false" /></td>
+                        <td class="tg-031e">x 4 = <input class="intInput" id="calProtTotal" type="number" placeholder="0" contenteditable="false" /></td>
+                        <td class="tg-vn4c">x 9 = <input class="intInput" id="calLipTotal" type="number" placeholder="0" contenteditable="false" /></td>
+                        <td class="tg-031e">Total = <input class="intInput" id="calCalTotal" type="number" placeholder="0" contenteditable="false" /></td>
+                    </tr>
+                    <tr>
+                        <td class="tg-031e">Porcentaje</td>
+                        <td class="tg-vn4c"><input class="intInput" id="porChosTotal" type="number" placeholder="0" contenteditable="false" /></td>
+                        <td class="tg-031e"><input class="intInput" id="porProtTotal" type="number" placeholder="0" contenteditable="false" /></td>
+                        <td class="tg-vn4c"><input class="intInput" id="porLipTotal" type="number" placeholder="0" contenteditable="false" /></td>
+                        <td class="tg-031e"><input class="intInput" id="porCalTotal" type="number" placeholder="0" contenteditable="false" /></td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

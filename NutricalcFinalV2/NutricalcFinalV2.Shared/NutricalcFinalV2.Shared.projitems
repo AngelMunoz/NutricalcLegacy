@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="SharedProjectFile_SccProperties">
+    <SharedProjectFile_ProjectGuid>{97ad409c-020c-4222-a2ac-4ef9b2039dae}</SharedProjectFile_ProjectGuid>
+    <SharedProjectFile_SccProjectName>SAK</SharedProjectFile_SccProjectName>
+    <SharedProjectFile_SccAuxPath>SAK</SharedProjectFile_SccAuxPath>
+    <SharedProjectFile_SccLocalPath>SAK</SharedProjectFile_SccLocalPath>
+    <SharedProjectFile_SccProvider>SAK</SharedProjectFile_SccProvider>
+  </PropertyGroup>
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>96ec635f-8776-432f-89df-1fc534fced33</SharedGUID>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)js\default.js" />
+    <Content Include="$(MSBuildThisFileDirectory)js\jquery-2.1.3.intellisense.js" />
+    <Content Include="$(MSBuildThisFileDirectory)js\jquery-2.1.3.js" />
+    <Content Include="$(MSBuildThisFileDirectory)js\jquery-2.1.3.min.js" />
+    <Content Include="$(MSBuildThisFileDirectory)js\jquery-2.1.3.min.map" />
+    <Content Include="$(MSBuildThisFileDirectory)js\navigator.js" />
+    <Content Include="$(MSBuildThisFileDirectory)images\gray.png" />
+    <Content Include="$(MSBuildThisFileDirectory)pages\diagnostico\diagnostico.css" />
+    <Content Include="$(MSBuildThisFileDirectory)pages\diagnostico\diagnostico.html" />
+    <Content Include="$(MSBuildThisFileDirectory)pages\diagnostico\diagnostico.js" />
+    <Content Include="$(MSBuildThisFileDirectory)pages\dieta\dieta.css" />
+    <Content Include="$(MSBuildThisFileDirectory)pages\dieta\dieta.html" />
+    <Content Include="$(MSBuildThisFileDirectory)pages\dieta\dieta.js" />
+    <Content Include="$(MSBuildThisFileDirectory)pages\hub\hub.js" />
+    <Content Include="$(MSBuildThisFileDirectory)pages\paciente\paciente.css" />
+    <Content Include="$(MSBuildThisFileDirectory)pages\paciente\paciente.html" />
+    <Content Include="$(MSBuildThisFileDirectory)pages\paciente\paciente.js" />
+  </ItemGroup>
+</Project>

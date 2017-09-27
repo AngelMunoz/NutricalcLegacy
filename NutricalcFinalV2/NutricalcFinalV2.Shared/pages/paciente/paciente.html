@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>paciente</title>
+
+    <link href="paciente.css" rel="stylesheet" />
+    <script src="../../js/jquery-2.1.3.min.js"></script>
+    <script src="paciente.js"></script>
+</head>
+<body>
+    <div class="paciente fragment">
+        <header class="page-header" aria-label="Header content" role="banner">
+            <button class="back-button" data-win-control="WinJS.UI.BackButton"></button>
+            <h1 class="titlearea win-type-ellipsis">
+                <span class="pagetitle">Paciente</span>
+            </h1>
+        </header>
+        <section class="page-section" aria-label="Main content" role="main">
+            <form id="datosPaciente">
+                <input id="idPaciente" placeholder="Id Paciente" contenteditable="false"/>
+                <br />Tipos de Parametro: <br /> 1 Hombre, 2 Mujer, 3 Mujer Embarazada
+                <input id="parametro" type="number" required placeholder="Parametro" />
+                <input id="nombre" type="text" placeholder="Nombre" />
+                <input id="sexo" type="text" placeholder="Sexo" />
+                <input id="edad" type="number" required placeholder="Edad" />
+                <input id="peso" type="number" required placeholder="Peso" />
+                <input id="talla" type="number" required placeholder="Talla" />
+                <input id="cirCintura" type="number" required placeholder="Circ. Cintura" />
+                <input id="cirCadera" type="number" required placeholder="Circ. Cadera" />
+                <input id="cirMuneca" type="number" required placeholder="Circ. Muneca" />
+                <input id="pliegueTricipital" type="number" required placeholder="Pliegue Tricipital" />
+                <input id="porcentajeGrasa" type="number" required placeholder="Porcentaje Grasa" />
+                <input id="horaSueno" type="number" required placeholder="Horas de Sueno" />
+                <br /> Tipos de Parametro para Actividad Fisica: <br />
+                Poca o Nada: 1, Ligera: 2,<br /> Moderado: 3, Fuerte: 4, Muy Fuerte: 5.
+                <input id="actFisica" name="actFisica" type="text" required placeholder="Actividad Fisica" />
+            </form>
+        </section>
+    </div>
+</body>
+</html>

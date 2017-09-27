@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>dieta</title>
+
+    <link href="dieta.css" rel="stylesheet" />
+    <script src="../../js/jquery-2.1.3.min.js"></script>
+    <script src="dieta.js"></script>
+</head>
+<body>
+    <div class="dieta fragment">
+        <header class="page-header" aria-label="Header content" role="banner">
+            <button class="back-button" data-win-control="WinJS.UI.BackButton"></button>
+            <h1 class="titlearea win-type-ellipsis">
+                <span class="pagetitle">Dieta</span>
+            </h1>
+        </header>
+        <section class="page-section" aria-label="Main content" role="main">
+            <form id="datosDieta">
+                <input id="idDieta" name="idDieta" placeholder="Id Dieta" contenteditable="false"/>
+                <input id="titulo" name="titulo" placeholder="Titulo de la Dieta" />
+                <input name="categoria" id="categoria" placeholder="Categoria" />
+                <textarea id="contenido" name="contenido" placeholder="Contenido de la Dieta"></textarea>
+                <input id="btnGuardarD" type="button" value="Guardar" />
+                <input id="btnCancelar" type="button" value="Cancelar" />
+            </form>
+        </section>
+    </div>
+</body>
+</html>

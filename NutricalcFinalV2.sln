@@ -1,0 +1,106 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SharedApp", "SharedApp", "{3DE61D4C-F5A2-46D2-AD3B-DBB4E378A493}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "NutricalcFinalV2.Shared", "NutricalcFinalV2\NutricalcFinalV2.Shared\NutricalcFinalV2.Shared.shproj", "{96EC635F-8776-432F-89DF-1FC534FCED33}"
+EndProject
+Project("{262852C6-CD72-467D-83FE-5EEB1973A190}") = "NutricalcFinalV2.Windows", "NutricalcFinalV2\NutricalcFinalV2.Windows\NutricalcFinalV2.Windows.jsproj", "{64D06A8D-C589-413F-8EFF-77A2EA193AC2}"
+EndProject
+Project("{262852C6-CD72-467D-83FE-5EEB1973A190}") = "NutricalcFinalV2.WindowsPhone", "NutricalcFinalV2\NutricalcFinalV2.WindowsPhone\NutricalcFinalV2.WindowsPhone.jsproj", "{247665B4-7BC0-4186-B9FB-0776910ED4B1}"
+EndProject
+Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		NutricalcFinalV2\NutricalcFinalV2.Shared\NutricalcFinalV2.Shared.projitems*{64d06a8d-c589-413f-8eff-77a2ea193ac2}*SharedItemsImports = 5
+		NutricalcFinalV2\NutricalcFinalV2.Shared\NutricalcFinalV2.Shared.projitems*{96ec635f-8776-432f-89df-1fc534fced33}*SharedItemsImports = 13
+		NutricalcFinalV2\NutricalcFinalV2.Shared\NutricalcFinalV2.Shared.projitems*{247665b4-7bc0-4186-b9fb-0776910ed4b1}*SharedItemsImports = 5
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 5
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://tunaxor.visualstudio.com/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = NutricalcFinalV2\\NutricalcFinalV2.Shared\\NutricalcFinalV2.Shared.projitems
+		SccProjectTopLevelParentUniqueName1 = NutricalcFinalV2.sln
+		SccProjectName1 = NutricalcFinalV2/NutricalcFinalV2.Shared
+		SccLocalPath1 = NutricalcFinalV2\\NutricalcFinalV2.Shared
+		SccProjectUniqueName2 = NutricalcFinalV2\\NutricalcFinalV2.Shared\\NutricalcFinalV2.Shared.shproj
+		SccProjectTopLevelParentUniqueName2 = NutricalcFinalV2.sln
+		SccProjectName2 = NutricalcFinalV2/NutricalcFinalV2.Shared
+		SccLocalPath2 = NutricalcFinalV2\\NutricalcFinalV2.Shared
+		SccProjectUniqueName3 = NutricalcFinalV2\\NutricalcFinalV2.Windows\\NutricalcFinalV2.Windows.jsproj
+		SccProjectTopLevelParentUniqueName3 = NutricalcFinalV2.sln
+		SccProjectName3 = NutricalcFinalV2/NutricalcFinalV2.Windows
+		SccLocalPath3 = NutricalcFinalV2\\NutricalcFinalV2.Windows
+		SccProjectUniqueName4 = NutricalcFinalV2\\NutricalcFinalV2.WindowsPhone\\NutricalcFinalV2.WindowsPhone.jsproj
+		SccProjectTopLevelParentUniqueName4 = NutricalcFinalV2.sln
+		SccProjectName4 = NutricalcFinalV2/NutricalcFinalV2.WindowsPhone
+		SccLocalPath4 = NutricalcFinalV2\\NutricalcFinalV2.WindowsPhone
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|ARM = Debug|ARM
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|ARM = Release|ARM
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{64D06A8D-C589-413F-8EFF-77A2EA193AC2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64D06A8D-C589-413F-8EFF-77A2EA193AC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64D06A8D-C589-413F-8EFF-77A2EA193AC2}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{64D06A8D-C589-413F-8EFF-77A2EA193AC2}.Debug|ARM.ActiveCfg = Debug|ARM
+		{64D06A8D-C589-413F-8EFF-77A2EA193AC2}.Debug|ARM.Build.0 = Debug|ARM
+		{64D06A8D-C589-413F-8EFF-77A2EA193AC2}.Debug|ARM.Deploy.0 = Debug|ARM
+		{64D06A8D-C589-413F-8EFF-77A2EA193AC2}.Debug|x64.ActiveCfg = Debug|x64
+		{64D06A8D-C589-413F-8EFF-77A2EA193AC2}.Debug|x64.Build.0 = Debug|x64
+		{64D06A8D-C589-413F-8EFF-77A2EA193AC2}.Debug|x64.Deploy.0 = Debug|x64
+		{64D06A8D-C589-413F-8EFF-77A2EA193AC2}.Debug|x86.ActiveCfg = Debug|x86
+		{64D06A8D-C589-413F-8EFF-77A2EA193AC2}.Debug|x86.Build.0 = Debug|x86
+		{64D06A8D-C589-413F-8EFF-77A2EA193AC2}.Debug|x86.Deploy.0 = Debug|x86
+		{64D06A8D-C589-413F-8EFF-77A2EA193AC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64D06A8D-C589-413F-8EFF-77A2EA193AC2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64D06A8D-C589-413F-8EFF-77A2EA193AC2}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{64D06A8D-C589-413F-8EFF-77A2EA193AC2}.Release|ARM.ActiveCfg = Release|ARM
+		{64D06A8D-C589-413F-8EFF-77A2EA193AC2}.Release|ARM.Build.0 = Release|ARM
+		{64D06A8D-C589-413F-8EFF-77A2EA193AC2}.Release|ARM.Deploy.0 = Release|ARM
+		{64D06A8D-C589-413F-8EFF-77A2EA193AC2}.Release|x64.ActiveCfg = Release|x64
+		{64D06A8D-C589-413F-8EFF-77A2EA193AC2}.Release|x64.Build.0 = Release|x64
+		{64D06A8D-C589-413F-8EFF-77A2EA193AC2}.Release|x64.Deploy.0 = Release|x64
+		{64D06A8D-C589-413F-8EFF-77A2EA193AC2}.Release|x86.ActiveCfg = Release|x86
+		{64D06A8D-C589-413F-8EFF-77A2EA193AC2}.Release|x86.Build.0 = Release|x86
+		{64D06A8D-C589-413F-8EFF-77A2EA193AC2}.Release|x86.Deploy.0 = Release|x86
+		{247665B4-7BC0-4186-B9FB-0776910ED4B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{247665B4-7BC0-4186-B9FB-0776910ED4B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{247665B4-7BC0-4186-B9FB-0776910ED4B1}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{247665B4-7BC0-4186-B9FB-0776910ED4B1}.Debug|ARM.ActiveCfg = Debug|ARM
+		{247665B4-7BC0-4186-B9FB-0776910ED4B1}.Debug|ARM.Build.0 = Debug|ARM
+		{247665B4-7BC0-4186-B9FB-0776910ED4B1}.Debug|ARM.Deploy.0 = Debug|ARM
+		{247665B4-7BC0-4186-B9FB-0776910ED4B1}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{247665B4-7BC0-4186-B9FB-0776910ED4B1}.Debug|x86.ActiveCfg = Debug|x86
+		{247665B4-7BC0-4186-B9FB-0776910ED4B1}.Debug|x86.Build.0 = Debug|x86
+		{247665B4-7BC0-4186-B9FB-0776910ED4B1}.Debug|x86.Deploy.0 = Debug|x86
+		{247665B4-7BC0-4186-B9FB-0776910ED4B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{247665B4-7BC0-4186-B9FB-0776910ED4B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{247665B4-7BC0-4186-B9FB-0776910ED4B1}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{247665B4-7BC0-4186-B9FB-0776910ED4B1}.Release|ARM.ActiveCfg = Release|ARM
+		{247665B4-7BC0-4186-B9FB-0776910ED4B1}.Release|ARM.Build.0 = Release|ARM
+		{247665B4-7BC0-4186-B9FB-0776910ED4B1}.Release|ARM.Deploy.0 = Release|ARM
+		{247665B4-7BC0-4186-B9FB-0776910ED4B1}.Release|x64.ActiveCfg = Release|Any CPU
+		{247665B4-7BC0-4186-B9FB-0776910ED4B1}.Release|x86.ActiveCfg = Release|x86
+		{247665B4-7BC0-4186-B9FB-0776910ED4B1}.Release|x86.Build.0 = Release|x86
+		{247665B4-7BC0-4186-B9FB-0776910ED4B1}.Release|x86.Deploy.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{96EC635F-8776-432F-89DF-1FC534FCED33} = {3DE61D4C-F5A2-46D2-AD3B-DBB4E378A493}
+		{64D06A8D-C589-413F-8EFF-77A2EA193AC2} = {3DE61D4C-F5A2-46D2-AD3B-DBB4E378A493}
+		{247665B4-7BC0-4186-B9FB-0776910ED4B1} = {3DE61D4C-F5A2-46D2-AD3B-DBB4E378A493}
+	EndGlobalSection
+EndGlobal
